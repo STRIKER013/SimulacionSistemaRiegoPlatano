@@ -1,0 +1,10 @@
+C:\Users\Windows\source\repos\Intento de simulación\Intento de simulación\bin\Debug\Intento de simulación.exe.config
+C:\Users\Windows\source\repos\Intento de simulación\Intento de simulación\bin\Debug\Intento de simulación.exe
+C:\Users\Windows\source\repos\Intento de simulación\Intento de simulación\bin\Debug\Intento de simulación.pdb
+C:\Users\Windows\source\repos\Intento de simulación\Intento de simulación\obj\Debug\Intento de simulación.csprojAssemblyReference.cache
+C:\Users\Windows\source\repos\Intento de simulación\Intento de simulación\obj\Debug\Intento_de_simulación.FrmPrincipal.resources
+C:\Users\Windows\source\repos\Intento de simulación\Intento de simulación\obj\Debug\Intento_de_simulación.Properties.Resources.resources
+C:\Users\Windows\source\repos\Intento de simulación\Intento de simulación\obj\Debug\Intento de simulación.csproj.GenerateResource.cache
+C:\Users\Windows\source\repos\Intento de simulación\Intento de simulación\obj\Debug\Intento de simulación.csproj.CoreCompileInputs.cache
+C:\Users\Windows\source\repos\Intento de simulación\Intento de simulación\obj\Debug\Intento de simulación.exe
+C:\Users\Windows\source\repos\Intento de simulación\Intento de simulación\obj\Debug\Intento de simulación.pdb
