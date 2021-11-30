@@ -10,16 +10,24 @@ using System.Windows.Forms;
 
 namespace Intento_de_simulación {
     public partial class FrmPrincipal : Form {
+        public decimal cantAgua { get; set; }
         public FrmPrincipal() {
             InitializeComponent();
+            Btn_desable();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e) {
 
         }
 
-
-
+        public void Btn_desable()
+        {
+            btn_CrecimientoEneroMarzo.Enabled = true;
+            btn_CrecimientoMarzoMayo.Enabled = false;
+            btn_CrecimientoMayoJulio.Enabled = false;
+            btn_CrecimientoJulioSeptiembre.Enabled = false;
+            btn_CrecimientoSeptiembreNoviembre.Enabled = false;
+        }
         public void PlatanitoVerdadero() {
             this.pb_Platanito1.Visible = true;
             this.pb_Platanito2.Visible = true;
@@ -123,6 +131,7 @@ namespace Intento_de_simulación {
             this.pb_PlatanoFruto8.Visible = true;
 
         }
+
         public void PlatanoFrutoFalso() {
             this.pb_PlatanoFruto1.Visible = false;
             this.pb_PlatanoFruto2.Visible = false;
@@ -144,6 +153,9 @@ namespace Intento_de_simulación {
             PlatanoGrandeFalso();
             PlatanoFrutoFalso();
             PlatanitoVerdadero();
+            cbxClima.Enabled = true;
+            btn_CrecimientoEneroMarzo.Enabled = false;
+            btn_CrecimientoMarzoMayo.Enabled = true;
         }
 
         private void btn_CrecimientoMarzoMayo_Click(object sender, EventArgs e) {
@@ -152,7 +164,9 @@ namespace Intento_de_simulación {
             PlatanoGrandeFalso();
             PlatanoFrutoFalso();
             PlatanoMedianoverdadero();
-
+            cbxClima.Enabled = true;
+            btn_CrecimientoMarzoMayo.Enabled = false;
+            btn_CrecimientoMayoJulio.Enabled = true;
         }
 
         private void btn_CrecimientoMayoJulio_Click(object sender, EventArgs e) {
@@ -161,20 +175,53 @@ namespace Intento_de_simulación {
             PlatanoGrandeFalso();
             PlatanoFrutoFalso();
             MedianoGrandeVerdadero();
-
+            cbxClima.Enabled = true;
+            btn_CrecimientoMayoJulio.Enabled = false;
+            btn_CrecimientoJulioSeptiembre.Enabled = true;
         }
 
         private void btn_CrecimientoJulioSeptiembre_Click(object sender, EventArgs e) {
             MedianoGrandeFalso();
             PlatanoFrutoFalso();
             PlatanoGrandeVerdadero();
+            cbxClima.Enabled = true;
+            btn_CrecimientoJulioSeptiembre.Enabled = false;
+            btn_CrecimientoSeptiembreNoviembre.Enabled = true;
+
         }
 
         private void btn_CrecimientoSeptiembreNoviembre_Click(object sender, EventArgs e) {
             PlatanoGrandeFalso();
             PlatanoFrutoVerdadero();
+            cbxClima.Enabled = true;
+            btn_CrecimientoSeptiembreNoviembre.Enabled = false;
         }
 
+        private void cbxClima_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxClima.SelectedIndex.Equals(0))
+            {
+                cantAgua = cantAgua + (1170 * 3);
+                txtCantidadAgua.Text = cantAgua.ToString();
+            }else if (cbxClima.SelectedIndex.Equals(1))
+            {
+                cantAgua = cantAgua + (970 * 3);
+                txtCantidadAgua.Text = cantAgua.ToString();
+            }else if (cbxClima.SelectedIndex.Equals(2))
+            {
+                cantAgua = cantAgua + (765 * 3);
+                txtCantidadAgua.Text = cantAgua.ToString();
+            }
+
+            cbxClima.Enabled = false;
+        }
+
+        private void btn_Reiniciar_Click(object sender, EventArgs e)
+        {
+            Btn_desable();
+            cantAgua = 0;
+            txtCantidadAgua.Text = "0";
+        }
 
     }
 }
